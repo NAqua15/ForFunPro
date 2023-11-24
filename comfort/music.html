@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMFORT MUSIC</title>
+    <link rel="icon" type="image/x-icon" href="pics/favicon.png">
+    <link rel="stylesheet" type="text/css" href="music.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <link  href="https://fonts.googleapis.com/css?family=QuickSand:500" rel ="stylesheet">
+  
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="comfort.html">COMFORT</a></li>
+            <li><a href="travel.html">Travel</a></li>
+        </ul>
+    </nav>
+
+    <div class="s1">
+        <h1 class="fade-in">Listen to Music</h1>
+        <p class="fade-in">Enjoy the music!</p>
+    </div>
+
+
+
+
+
+    <div class="audio-player">
+        <div class="audio-item">
+            <h3>Sarah Blasko - All I Want (Beny Remix)  </h3>
+            <audio src="music/Sarah Blasko - All I Want (Beny Remix) ll.l10.01.2013.l.llStyleChillstep.mp3" controls></audio>
+        </div>
+        <div class="audio-item">
+            <h3>Ömer Balik - Last Time</h3>
+            <audio src="music/Ömer Balık - Last Time.mp3" controls></audio>
+        </div>
+        <div class="audio-item">
+            <h3>Omer Balik - Coffee Blues</h3>
+            <audio src="music/Omer Balik - Coffee Blues.mp3" controls></audio>
+        </div>
+        <div class="audio-item">
+            <h3>Omer Balik - Night Shift</h3>
+            <audio src="music/Omer Balik - Night Shift.mp3" controls></audio>
+        </div>
+        <div class="audio-item">
+            <h3>El Profesor & HUGEL - Bella ciao (HUGEL Remix)</h3>
+            <audio src="music/El Profesor & HUGEL - Bella ciao (HUGEL Remix).mp3" controls></audio>
+        </div>
+        <div class="audio-item">
+            <h3>Sarah Blasko - All I Want (Beny Remix) ll.l10.01.2013.l.llStyleChillstep</h3>
+            <audio src="music/Sarah Blasko - All I Want (Beny Remix) ll.l10.01.2013.l.llStyleChillstep.mp3" controls></audio>
+        </div>
+        <div class="audio-item">
+            <h3>Monaldin feat. Emma Péters - Femme Like You</h3>
+            <audio src="music/Monaldin feat. Emma Péters - Femme Like You.mp3" controls></audio>
+        </div>
+        <div class="audio-item">
+            <h3>Ömer Balik - Chicago Downtown</h3>
+            <audio src="music/Ömer Balık - Chicago Downtown.mp3" controls></audio>
+        </div>
+    </div>
+
+    
+
+
+
+
+    <div class="dancing-girl">
+        <img src="gif/girl.gif" alt="Dancing Girl">
+    </div>
+
+    <div class="dancing-girl2">
+        <img src="gif/girl.gif" alt="Dancing Girl2">
+    </div>
+
+
+
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const h1 = document.querySelector('h1');
+            const p = document.querySelector('p');
+            h1.classList.add('fade-in');
+            p.classList.add('fade-in');
+        });
+
+
+
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.pageYOffset > 0) {
+                navbar.classList.add('scroll-down');
+            } else {
+                navbar.classList.remove('scroll-down');
+            }
+        });
+    </script>
+</body>
+</html>

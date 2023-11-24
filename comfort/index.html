@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMFORT</title>
+    <link rel="icon" type="image/x-icon" href="pics/favicon.png">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <link  href="https://fonts.googleapis.com/css?family=QuickSand:500" rel ="stylesheet">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="music.html">Music</a></li>
+      <li><a href="comfort.html">COMFORT</a></li>
+      <li><a href="travel.html">Travel</a></li>
+    </ul>
+  </nav>
+
+
+  <div class="s1">
+    <h1 class="typing-animation">Welcome to COMFORT</h1>
+    <p class="typing-animation">Here you can find your comfort</p>
+    <p class="typing-animation">USE THE  WEBSITE WITH PLEASURE!</p>
+  </div>>
+
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-image">
+          <img src="pics/guitar.jpg" alt="Guitar">
+          <div class="overlay">
+            <h2>GUITAR</h2>
+            <p>High-quality guitar for all your musical needs.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image">
+          <img src="pics/piano.jpg" alt="Guitar">
+          <div class="overlay">
+            <h2>PIANO</h2>
+            <p>High-quality piano for all your musical needs.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="pics/drum.jpg" alt="Guitar">
+          <div class="overlay">
+            <h2>DRUM</h2>
+            <p>High-quality drum for all your musical needs.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="pics/royal.jpg" alt="Guitar">
+          <div class="overlay">
+            <h2>ROYAL</h2>
+            <p>High-quality royal for all your musical needs.</p>
+          </div>
+        </div>
+      </div>
+      </div>
+
+  
+      <div id="jupiter" class="mus">
+        <img src="pics/headphone.webp" alt="Jupiter">
+        <div class="mus-info">
+          <a href="music.html">MUZ</h3>
+        </div>
+      </div>
+      
+
+      <div id="loader"></div>
+
+  <script>
+    const cardImages = document.querySelectorAll('.card-image');
+    cardImages.forEach((cardImage) => {
+      const overlay = cardImage.querySelector('.overlay');
+      cardImage.addEventListener('mouseenter', () => {
+        overlay.style.opacity = '1';
+      });
+      cardImage.addEventListener('mouseleave', () => {
+        overlay.style.opacity = '0';
+      });
+    });
+
+
+    var muss = document.querySelectorAll('.mus');
+
+    muss.forEach(function(mus) {
+      mus.addEventListener('mouseenter', function() {
+        this.style.transform = 'scale(1.5)';
+        this.querySelector('.mus-info').style.display = 'block';
+      });
+
+      mus.addEventListener('mouseleave', function() {
+        this.style.transform = 'scale(1)';
+        this.querySelector('.mus-info').style.display = 'none';
+      });
+    });
+
+
+
+    window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.pageYOffset > 0) {
+                navbar.classList.add('scroll-down');
+            } else {
+                navbar.classList.remove('scroll-down');
+            }
+        });
+  
+
+        window.onload = function() {
+  var loader = document.getElementById("loader");
+  loader.style.display = "none"; 
+}
+  </script>
+
+
+<button onclick="topFunction()" id="scrollTopBtn" title="Go to top">Top</button>
+
+  <script>
+     
+    var scrollTopButton = document.getElementById("scrollTopBtn");
+
+     
+    window.onscroll = function() {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollTopButton.style.display = "block";
+      } else {
+        scrollTopButton.style.display = "none";
+      }
+    }
+
+    
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+   <div class="copyright">
+    <p>&copy; 2023 ForFun. All Rights Reserved.</p>
+  </div>
+</body>
+</html>

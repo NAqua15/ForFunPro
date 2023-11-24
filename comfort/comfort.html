@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMFORT</title>
+    <link rel="icon" type="image/x-icon" href="pics/favicon.png">
+    <link rel="stylesheet" type="text/css" href="comfort.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <link  href="https://fonts.googleapis.com/css?family=QuickSand:500" rel ="stylesheet">
+</head>
+<body>
+    <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="music.html">Music</a></li>
+          <li><a href="comfort.html">COMFORT</a></li>
+          <li><a href="travel.html">Travel</a></li>
+        </ul>
+      </nav>
+
+      <div class="container">
+        <h1>How you doing ?</h1>
+        <div class="input-container">
+          <input type="text" id="taskInput" placeholder="let the public know:">
+          <button id="addButton" onclick="addItem()">Add</button>
+        </div>
+        <ul id="taskList"></ul>
+      </div>
+    
+
+
+
+      <div class="comfort-boy">
+        <img style="height: 200; width: 288px; " src="gif/comfortboy.gif" alt="comfort boy">
+    </div>
+    <div class="comfort-boy2">
+        <img style="height: 315.03px; width: 200px; " src="gif/comfortboy2.gif" alt="comfort boy">
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <script>
+        const taskInput = document.getElementById("taskInput");
+        const taskList = document.getElementById("taskList");
+    
+        let comFort = [];
+
+        window.onload = function() {
+            const savedTasks = localStorage.getItem("comFort");
+            if (savedTasks) {
+                comFort = JSON.parse(savedTasks);
+                displayList();
+            }
+        }
+
+    
+        function addItem() {
+          const item = taskInput.value;
+          if (item) {
+            const task = { item };
+            comFort.push(task);
+            saveTasks();
+            displayList();
+            taskInput.value = "";
+          }
+        }
+    
+        function removeItem(index) {
+            comFort.splice(index, 1);
+            saveTasks();
+          displayList();
+        }
+    
+        function editItem(index) {
+          const task = comFort[index];
+          const newTask = prompt(
+            "Enter the updated YOUR COMFORT?:",
+            task.item
+          );
+          if (newTask) {
+            task.item = newTask;
+            saveTasks();
+            displayList();
+          }
+        }
+    
+        function displayList() {
+          taskList.innerHTML = "";
+    
+          comFort.forEach((task, index) => {
+            const listItem = document.createElement("li");
+            listItem.classList.add("task-item");
+    
+            const taskText = document.createElement("span");
+            taskText.textContent = `${task.item}`;
+            taskText.classList.add("task-text");
+    
+            const editButton = document.createElement("button");
+            editButton.textContent = "Edit";
+            editButton.classList.add("edit-button");
+            editButton.onclick = () => editItem(index);
+    
+            const removeButton = document.createElement("button");
+            removeButton.textContent = "Remove";
+            removeButton.classList.add("remove-button");
+            removeButton.onclick = () => removeItem(index);
+    
+            listItem.appendChild(taskText);
+            listItem.appendChild(editButton);
+            listItem.appendChild(removeButton);
+            taskList.appendChild(listItem);  
+          });
+        }
+
+        function saveTasks() {
+            localStorage.setItem("comFort", JSON.stringify(comFort));
+        }
+      </script>
+    
+</body>
+</html>

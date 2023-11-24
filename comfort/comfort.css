@@ -1,0 +1,171 @@
+body, ul {
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    font-family: sans-serif;
+  }
+  nav {
+    background-color: #333;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    flex: 1;
+  }
+  
+  nav ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  nav ul li a:hover {
+    background-color: #555;
+  }
+  
+  @media screen and (max-width: 600px) {
+    nav ul {
+      flex-direction: column;
+    }
+  }
+
+  .s1 {
+    text-align: center;
+      color: #fff7f7;
+      background-color: #333;
+  }
+  .s1 h1 {
+    margin-top: 70px;
+    margin-bottom: 35px;
+  }
+  .s1 p {
+    padding: 5px;
+    margin: 5px 0;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+   h1 {
+    text-align: center;
+    color: #c9c9c9;
+    font-size: 60px;
+  }
+
+  .container {
+    max-width: 1500px;
+    margin-top: 100px;
+    height: 400px;
+    
+  }
+
+  .input-container {
+    display: flex;
+    padding: 100px;
+    padding-bottom: 3px;
+  }
+
+  #taskInput {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 30px;
+    border: none;
+    border-radius: 5px;
+  }
+
+  #addButton {
+    padding: 10px 20px;
+    font-size: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  #taskList {
+    list-style-type: none;
+    padding: 90px;
+    margin-top: 20px;
+  }
+
+
+  .task-item {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+  }
+
+  .task-text {
+    flex-grow: 1;
+    margin-right: 10px;
+    color: #333;
+    font-size: 30px;
+  }
+
+  .edit-button,
+  .remove-button {
+    padding: 5px 10px;
+    font-size: 30px;
+    border: none;
+    border-radius: 3px;
+    background-color: #555252;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .edit-button:hover,
+  .remove-button:hover {
+    background-color: #999;
+  }
+
+
+  .comfort-boy{
+    position: absolute;
+            bottom: 10px;
+            left: 15%;
+            top: 90px;
+            transform: translateX(-50%);
+            opacity: 70%;
+            animation: girlDance 3s infinite;
+  }
+  .comfort-boy2 img{
+    position: absolute;
+            bottom: 10px;
+            left: 80%;
+            top: 33px;
+            opacity: 70%;
+            animation: girlDance 3s infinite;
+  }
+
+
+  ::-webkit-scrollbar {
+     height: 10px; max-height: 10px; 
+   } 
+
+
+  ::-webkit-scrollbar-thumb { 
+    height: 10px; max-height: 10px; 
+  }
